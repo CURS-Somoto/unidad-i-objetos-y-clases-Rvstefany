@@ -1,0 +1,37 @@
+
+using System;
+
+class Empleado
+{
+    public string Nombre { get; set; }
+    public double Salario { get; set; }
+
+    public double CalcularSalarioAnual()
+    {
+        return Salario * 12;
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Crear objetos Empleado
+        Empleado empleado1 = new Empleado();
+        empleado1.Nombre = "Juan";
+        empleado1.Salario = 1000;
+
+        Empleado empleado2 = new Empleado();
+        empleado2.Nombre = "María";
+        empleado2.Salario = 1500;
+
+        // Calcular salario anual para cada empleado
+        double salarioAnual1 = empleado1.CalcularSalarioAnual();
+        double salarioAnual2 = empleado2.CalcularSalarioAnual();
+
+        // Mostrar resultados
+        Console.WriteLine("Salario anual de " + empleado1.Nombre + ": $" + salarioAnual1);
+        Console.WriteLine("Salario anual de "+ empleado2.Nombre + ": $" + salarioAnual2);
+        Console.ReadLine();
+    }
+}
